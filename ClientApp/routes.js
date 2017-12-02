@@ -4,6 +4,7 @@ import HomePage from 'components/home-page'
 import Hello from 'components/Hello'
 import Directives from 'components/Directives'
 import Databinding from 'components/Databinding'
+import Models from 'components/Models'
 
 export const routes = [
     { path: '/', component: HomePage, display: 'Home', style: 'glyphicon glyphicon-home' },
@@ -11,5 +12,6 @@ export const routes = [
     { path: '/fetch-data', component: FetchData, display: 'Fetch data', style: 'glyphicon glyphicon-th-list' },
     { path: '/Hello', component: Hello, display: 'Hello', style: 'glyphicon glyphicon-th-list' },
     { path: '/Directives', component: Directives, display: 'Directives', style: 'glyphicon glyphicon-th-list' },
-    { path: '/Databinding', component: Databinding, display: 'Databinding', style: 'glyphicon glyphicon-resize-small' }
+    { path: '/Databinding', component: Databinding, display: 'Databinding', style: 'glyphicon glyphicon-resize-small' },
+    { path: '/Models', component: Models, display: 'Models', style: 'glyphicon glyphicon-duplicate' }
 ]
