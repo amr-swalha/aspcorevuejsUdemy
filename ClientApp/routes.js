@@ -6,6 +6,7 @@ import Directives from 'components/Directives'
 import Databinding from 'components/Databinding'
 import Models from 'components/Models'
 import Routes from 'components/Routes'
+import Methods from 'components/Methods'
 import Child from 'components/Child/Child'
 
 export const routes = [
@@ -15,6 +16,7 @@ export const routes = [
     { path: '/Hello', component: Hello, display: 'Hello', style: 'glyphicon glyphicon-th-list' },
     { path: '/Directives', component: Directives, display: 'Directives', style: 'glyphicon glyphicon-th-list' },
     { path: '/Databinding', component: Databinding, display: 'Databinding', style: 'glyphicon glyphicon-resize-small' },
+    { path: '/Methods', component: Methods, display: 'Methods', style: 'glyphicon glyphicon-retweet' },
     { path: '/Models', component: Models, display: 'Models', style: 'glyphicon glyphicon-duplicate' },
     {
         path: '/Routes', component: Routes, display: 'Routes', style: 'glyphicon glyphicon-sort',
