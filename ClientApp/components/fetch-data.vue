@@ -1,4 +1,4 @@
-﻿<template>
+<template>
     <div>
         <h1>Weather forecast</h1>
 
@@ -44,7 +44,7 @@ export default {
         // ES2017 async/await syntax via babel-plugin-transform-async-to-generator
         // TypeScript can also transpile async/await down to ES5
         try {
-            let response = await this.$http.get('/api/SampleData/WeatherForecasts')
+            let response = await this.$http.get('/api/SampleData/WeatherForecasts');
             console.log(response.data);
             this.forecasts = response.data;
         } catch (error) {

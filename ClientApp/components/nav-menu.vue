@@ -1,4 +1,4 @@
-﻿<template>
+<template>
     <div class="main-nav">
         <div class="navbar navbar-inverse">
             <div class="navbar-header">
@@ -16,7 +16,7 @@
                     <ul class="nav navbar-nav">
                         <li v-for="route in routes">
                             <!-- TODO: highlight active link -->
-                            <router-link :to="route.path">
+                            <router-link :to="route.path" v-if="route.component != null">
                                 <span :class="route.style"></span> {{ route.display }}
                             </router-link>
                         </li>
