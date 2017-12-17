@@ -11,6 +11,7 @@ import Child from 'components/Child/Child'
 import Data from 'components/Data'
 import ListRendering from 'components/Advanced/ListRendering'
 import Computed from 'components/Advanced/Computed'
+import Mixins from 'components/Advanced/Mixins'
 
 export const routes = [
     { path: '/', component: HomePage, display: 'Home', style: 'glyphicon glyphicon-home' },
@@ -23,9 +24,12 @@ export const routes = [
     { path: '/Methods', component: Methods, display: 'Methods', style: 'glyphicon glyphicon-retweet' },
     { path: '/Models', component: Models, display: 'Models', style: 'glyphicon glyphicon-duplicate' },
     {
-        path: '/Routes', component: Routes, display: 'Routes', style: 'glyphicon glyphicon-sort',
+        path: '/Routes',
+        component: Routes,
+        display: 'Routes',
+        style: 'glyphicon glyphicon-sort',
         children: [
-            {path:'Child/:id',component:Child}
+            { path: 'Child/:id', component: Child }
         ]
     },
     {
@@ -35,5 +39,9 @@ export const routes = [
     {
         path: '/Advanced/Computed',
         component: Computed
+    },
+    {
+        path: '/Advanced/Mixins',
+        component: Mixins
     }
-]
+];
