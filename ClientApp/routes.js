@@ -13,6 +13,8 @@ import ListRendering from 'components/Advanced/ListRendering'
 import Computed from 'components/Advanced/Computed'
 import Mixins from 'components/Advanced/Mixins'
 import Custom from 'components/Deep/Custom'
+import Transition from 'components/Deep/Transition'
+import Filters from 'components/Deep/Filters'
 
 export const routes = [
     { path: '/', component: HomePage, display: 'Home', style: 'glyphicon glyphicon-home' },
@@ -49,5 +51,13 @@ export const routes = [
     {
         path: '/Deep/Custom',
         component: Custom
+    } ,
+    {
+        path: '/Deep/Transition',
+        component: Transition
+    },
+    {
+        path: '/Deep/Filters',
+        component: Filters
     }
 ];
