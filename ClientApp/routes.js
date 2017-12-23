@@ -12,6 +12,7 @@ import Data from 'components/Data'
 import ListRendering from 'components/Advanced/ListRendering'
 import Computed from 'components/Advanced/Computed'
 import Mixins from 'components/Advanced/Mixins'
+import Custom from 'components/Deep/Custom'
 
 export const routes = [
     { path: '/', component: HomePage, display: 'Home', style: 'glyphicon glyphicon-home' },
@@ -43,5 +44,10 @@ export const routes = [
     {
         path: '/Advanced/Mixins',
         component: Mixins
+    }
+    ,
+    {
+        path: '/Deep/Custom',
+        component: Custom
     }
 ];
