@@ -15,6 +15,7 @@ import Mixins from 'components/Advanced/Mixins'
 import Custom from 'components/Deep/Custom'
 import Transition from 'components/Deep/Transition'
 import Filters from 'components/Deep/Filters'
+import Vuex from 'components/Deep/Vuex'
 
 export const routes = [
     { path: '/', component: HomePage, display: 'Home', style: 'glyphicon glyphicon-home' },
@@ -59,5 +60,9 @@ export const routes = [
     {
         path: '/Deep/Filters',
         component: Filters
+    },
+    {
+        path: '/Deep/Vuex',
+        component: Vuex
     }
 ];
