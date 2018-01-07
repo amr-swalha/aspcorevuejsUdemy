@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Dapper.Contrib.Extensions;
 
 namespace Vue2Spa.Models
@@ -12,6 +13,9 @@ namespace Vue2Spa.Models
         public int CustomerId { get; set; }
 
         public decimal Total { get; set; }
-
+        [Write(false)]
+        public Customer Customer { get; set; }
+        [Write(false)]
+        public List<OrderItems> Items { get; set; }
     }
 }
