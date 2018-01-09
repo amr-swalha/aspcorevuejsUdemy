@@ -8,10 +8,10 @@ using Vue2Spa.Data;
 namespace Vue2Spa.Controllers
 {
     [Route("api/[controller]")]
-    public class OrderController : Controller
+    public class OrdersController : Controller
     {
         private readonly IConfiguration configuration;
-        public OrderController(IConfiguration config)
+        public OrdersController(IConfiguration config)
         {
             configuration = config;
         }
@@ -19,14 +19,46 @@ namespace Vue2Spa.Controllers
         [HttpGet("[action]")]
         public IActionResult Result()
         {
-            OrderManager manager = new OrderManager(configuration);
+            OrdersManager manager = new OrdersManager(configuration);
             return Ok(manager.GetWithItems());
         }
         [HttpGet("[action]")]
         public IActionResult AddItem()
         {
-            OrderManager manager = new OrderManager(configuration);
+            OrdersManager manager = new OrdersManager(configuration);
             return Ok(manager.AddItem());
+        }
+        [HttpGet("[action]")]
+        public IActionResult GetById(int id)
+        {
+            OrdersManager manager = new OrdersManager(configuration);
+            return Ok(manager.GetById(id));
+        }
+        [HttpGet("[action]")]
+        public IActionResult GetAllContrib()
+        {
+            OrdersManager manager = new OrdersManager(configuration);
+            return Ok(manager.GetAllContrib());
+        }
+        [HttpGet("[action]")]
+        public IActionResult Add()
+        {
+            OrdersManager manager = new OrdersManager(configuration);
+            return Ok(manager.AddOrder());
+        }
+        [HttpGet("[action]")]
+        public IActionResult Update()
+        {
+            OrdersManager manager = new OrdersManager(configuration);
+            manager.UpdateOrder();
+            return Ok();
+        }
+        [HttpGet("[action]")]
+        public IActionResult Delete()
+        {
+            OrdersManager manager = new OrdersManager(configuration);
+            manager.DeleteOrder();
+            return Ok();
         }
 
     }
