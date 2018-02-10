@@ -8,12 +8,10 @@ using Vue2Spa.Data;
 namespace Vue2Spa.Controllers
 {
     [Route("api/[controller]")]
-    public class OrdersController : Controller
+    public class OrdersController : BaseController
     {
-        private readonly IConfiguration configuration;
-        public OrdersController(IConfiguration config)
+        public OrdersController(IConfiguration config) : base(config)
         {
-            configuration = config;
         }
 
         [HttpGet("[action]")]
@@ -61,5 +59,6 @@ namespace Vue2Spa.Controllers
             return Ok();
         }
 
+       
     }
 }
