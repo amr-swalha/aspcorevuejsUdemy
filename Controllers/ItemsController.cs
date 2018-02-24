@@ -1,19 +1,25 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Vue2Spa.Data;
 using Vue2Spa.Models;
 
 namespace Vue2Spa.Controllers
 {
-    
+
     [Route("api/[controller]")]
     public class ItemsController : BaseController
     {
+        private ItemsManager manager;
+        public ItemsController(IConfiguration config) : base(config)
+        {
+            manager = new ItemsManager(configuration);
+        }
         // GET: api/Items
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Items> Get()
         {
-            return new string[] { "value1", "value2" };
+            return manager.GetAll();
         }
 
         // GET: api/Items/5
@@ -25,25 +31,26 @@ namespace Vue2Spa.Controllers
 
         // POST: api/Items
         [HttpPost]
-        public Item Post([FromBody]Item value)
+        public Items Post([FromBody]Items value)
+        {
+            manager.AddItem(value);
+            return value;
+        }
+
+        // PUT: api/Items
+        [HttpPut]
+        public Items Put([FromBody]Items value)
         {
             return value;
         }
-        
-        // PUT: api/Items/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+
+        // DELETE: api/Items
+        [HttpDelete]
+        public List<Items> Delete([FromBody]List<Items> value)
         {
-        }
-        
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            return value;
         }
 
-        public ItemsController(IConfiguration config) : base(config)
-        {
-        }
+
     }
 }

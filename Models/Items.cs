@@ -2,7 +2,8 @@ using Dapper.Contrib.Extensions;
 
 namespace Vue2Spa.Models
 {
-    public class Item
+    [Table("Items")]
+    public class Items
     {
         [Key]
         public int Id { get; set; }

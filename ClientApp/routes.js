@@ -16,6 +16,8 @@ import Custom from 'components/Deep/Custom'
 import Transition from 'components/Deep/Transition'
 import Filters from 'components/Deep/Filters'
 import Vuex from 'components/Deep/Vuex'
+import StoreHome from 'components/Store/Home'
+import StoreAdd from 'components/Store/Add'
 
 export const routes = [
     { path: '/', component: HomePage, display: 'Home', style: 'glyphicon glyphicon-home' },
@@ -27,6 +29,8 @@ export const routes = [
     { path: '/Databinding', component: Databinding, display: 'Databinding', style: 'glyphicon glyphicon-resize-small' },
     { path: '/Methods', component: Methods, display: 'Methods', style: 'glyphicon glyphicon-retweet' },
     { path: '/Models', component: Models, display: 'Models', style: 'glyphicon glyphicon-duplicate' },
+    { path: '/Store/Home', component: StoreHome, display: 'Store Home', style: 'glyphicon glyphicon-duplicate' },
+    { path: '/Store/Add', component: StoreAdd, display: 'Store Add Item', style: 'glyphicon glyphicon-duplicate' },
     {
         path: '/Routes',
         component: Routes,

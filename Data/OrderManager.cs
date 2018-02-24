@@ -50,7 +50,7 @@ namespace Vue2Spa.Data
             using (SqlConnection connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
             {
                 
-                return connection.Execute("INSERT INTO [dbo].[Item] ([Name],[Price]) VALUES (@ItemName,@Price)",
+                return connection.Execute("INSERT INTO [dbo].[Items] ([Name],[Price]) VALUES (@ItemName,@Price)",
                     new {ItemName = "Ipad", Price = 700}, null, null, CommandType.Text);
             }
         }
