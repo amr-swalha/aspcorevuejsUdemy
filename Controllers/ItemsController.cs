@@ -24,9 +24,9 @@ namespace Vue2Spa.Controllers
 
         // GET: api/Items/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public Items Get(int id)
         {
-            return "value";
+            return manager.GetById(id);
         }
 
         // POST: api/Items
@@ -41,16 +41,16 @@ namespace Vue2Spa.Controllers
         [HttpPut]
         public Items Put([FromBody]Items value)
         {
+            manager.UpdateItem(value);
             return value;
         }
 
-        // DELETE: api/Items
-        [HttpDelete]
-        public List<Items> Delete([FromBody]List<Items> value)
+        // DELETE: api/Items/5
+        [HttpDelete("{id}")]
+        public int Delete(int id)
         {
-            return value;
+            manager.DeleteItem(new Items{Id = id});
+            return id;
         }
-
-
     }
 }

@@ -18,6 +18,8 @@ import Filters from 'components/Deep/Filters'
 import Vuex from 'components/Deep/Vuex'
 import StoreHome from 'components/Store/Home'
 import StoreAdd from 'components/Store/Add'
+import StoreUpdate from 'components/Store/Update'
+import StoreDelete from 'components/Store/Delete'
 import Auth from 'components/Auth/Auth'
 
 export const routes = [
@@ -32,6 +34,8 @@ export const routes = [
     { path: '/Models', component: Models, display: 'Models', style: 'glyphicon glyphicon-duplicate' },
     { path: '/Store/Home', component: StoreHome, display: 'Store Home', style: 'glyphicon glyphicon-duplicate' },
     { path: '/Store/Add', component: StoreAdd, display: 'Store Add Item', style: 'glyphicon glyphicon-duplicate' },
+    { path: '/Store/Update', component: StoreUpdate, display: 'Store Update Item', style: 'glyphicon glyphicon-duplicate' },
+    { path: '/Store/Delete', component: StoreDelete, display: 'Store Delete Item', style: 'glyphicon glyphicon-duplicate' },
     { path: '/Auth/Auth', component: Auth, display: 'Authentication', style: 'glyphicon glyphicon-duplicate' },
     {
         path: '/Routes',
